@@ -1,13 +1,18 @@
+// https://github.com/ReactiveKoding/customtabbar
+
 import React from 'react';
 import { Animated, Image, TouchableOpacity, View } from 'react-native';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import plus from './assets/plus.png'
-import styles, { getWidth } from './styles';
-import { BookingScreen, RunningScreen, BikingScreen, SwimmingScreen } from './screens';
+import styles, { getWidth } from './src/Styles/styles';
 import { FontAwesome5 } from '@expo/vector-icons'
 import { useRef } from 'react';
+import { HomeScreen } from './src/Screens/HomeScreen';
+import { RunningScreen } from './src/Screens/RunningScreen';
+import { BikingScreen } from './src/Screens/BikingScreen';
+import { SwimmingScreen  } from './src/Screens/SwimmingScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,13 +24,13 @@ export default function App() {
         showLabel: false,
         style: styles.bottomBar
       }}>
-        <Tab.Screen name={"MyBookings"} component={BookingScreen} options={{
+        <Tab.Screen name={"HomeScreen"} component={HomeScreen} options={{
           tabBarIcon: ({ focused }) => (
             <View style={styles.icon}>
               <FontAwesome5
-                name="user-alt"
-                size={20}
-                color={focused ? 'red' : 'gray'}
+                  name="home"
+                  size={20}
+                  color={focused ? 'red' : 'gray'}
               ></FontAwesome5>
             </View>
           )
@@ -60,16 +65,7 @@ export default function App() {
         <Tab.Screen name={"ActionButton"} component={""} options={{
           tabBarIcon: ({ focused }) => (
             <TouchableOpacity>
-              <View style=
-              {{
-                width: 55,
-                height: 55,
-                backgroundColor: 'red',
-                borderRadius: 30,
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginBottom: Platform.OS == "android" ? 50 : 30
-              }}
+              <View style={styles.tabBarIcon}
               >
                   <Image source={plus} style={{
                     width: 22,
@@ -120,16 +116,8 @@ export default function App() {
         })}></Tab.Screen>
       </Tab.Navigator>
       <Animated.View style={{
-            width: getWidth() - 20,
-            height: 2,
-            backgroundColor: 'red',
-            position: 'absolute',
-            bottom: 98,
-            left: 50,
-            borderRadius: 20,
-            transform: [
-              { translateX: tabOffsetValue }
-            ]
+        ...styles.buttomMarker,
+        transform: [{ translateX: tabOffsetValue}] // hvordan lægges jeg denne i external stylesheet
       }}></Animated.View>
     </NavigationContainer>
   );
