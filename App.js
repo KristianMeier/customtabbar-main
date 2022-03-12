@@ -6,13 +6,13 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import plus from './assets/plus.png'
-import styles, { getWidth } from './src/Styles/styles';
 import { FontAwesome5 } from '@expo/vector-icons'
 import { useRef } from 'react';
 import { HomeScreen } from './src/Screens/HomeScreen';
 import { RunningScreen } from './src/Screens/RunningScreen';
 import { BikingScreen } from './src/Screens/BikingScreen';
 import { SwimmingScreen  } from './src/Screens/SwimmingScreen';
+import styles, { getWidth } from './src/styles';
 
 const Tab = createBottomTabNavigator();
 

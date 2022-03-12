@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, Text  } from 'react-native';
+import { View, Text  } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col} from 'react-native-table-component';
+import styles from '../styles.js';
 
 const CONTENT = {
   tableHead: ['', 'Aktivititet', 'Tid', 'Tilmeldt?'],
@@ -15,7 +16,7 @@ const CONTENT = {
 
 export function BikingScreen() {
   return (
-    <View style={styles.container}>
+    <View style={styles.containerTable}>
       <Text style={{fontSize: 30, align: "center"}}> Ugens Cykeltræninger </Text>
       <Text></Text>
       <Table borderStyle={{ borderWidth: 1 }}>
@@ -43,12 +44,3 @@ export function BikingScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16, paddingTop: 100, backgroundColor: '#fff' },
-  head: { height: 40, backgroundColor: 'aqua' },
-  wrapper: { flexDirection: 'row' },
-  title: { flex: 1 },
-  row: { height: 28 },
-  text: { textAlign: 'center' },
-});
