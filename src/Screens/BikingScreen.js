@@ -1,12 +1,18 @@
-import React from 'react';
-import { View, Text  } from 'react-native';
-import { Table, TableWrapper, Row, Rows, Col} from 'react-native-table-component';
-import styles from '../styles.js';
-import { tableContentMvp } from '../tableContentMvp.js';
+import React from "react";
+import { View, Text } from "react-native";
+import {
+  Table,
+  TableWrapper,
+  Row,
+  Rows,
+  Col,
+} from "react-native-table-component";
+import styles from "../styles.js";
+import { tableContent } from "../tableContent.js";
 
 export function BikingScreen() {
-  tableContentMvp.tableData.pop();
-  tableContentMvp.tableTitle.pop();
+  tableContent.tableData.pop();
+  tableContent.tableTitle.pop();
 
   return (
     <View style={styles.containerTable}>
@@ -14,20 +20,20 @@ export function BikingScreen() {
       <Text style={styles.header2}>Week 14</Text>
       <Table borderStyle={{ borderWidth: 1 }}>
         <Row
-          data={tableContentMvp.tableHead}
+          data={tableContent.tableHead}
           flexArr={[1, 2, 1, 1]}
           style={styles.head}
-          textStyle={{...styles.text, fontWeight: 'bold'}}
+          textStyle={{ ...styles.text, fontWeight: "bold" }}
         />
         <TableWrapper style={styles.wrapper}>
           <Col
-            data={tableContentMvp.tableTitle}
+            data={tableContent.tableTitle}
             style={styles.title}
             heightArr={[28, 28]}
-            textStyle={{...styles.text, fontWeight: 'bold'}}
+            textStyle={{ ...styles.text, fontWeight: "bold" }}
           />
           <Rows
-            data={tableContentMvp.tableData}
+            data={tableContent.tableData}
             flexArr={[2, 1, 1, 1]}
             style={styles.row}
             textStyle={styles.text}
