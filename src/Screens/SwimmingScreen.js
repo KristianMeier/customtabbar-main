@@ -2,47 +2,38 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
 import styles from '../styles.js';
+import { tableContentMvp } from '../tableContentMvp.js';
 
-const CONTENT = {
-  tableHead: ['', 'Aktivititet', 'Tid', 'Tilmeld'],
-  tableTitle: ['Tir 1/6', 'Ons 2/6', 'Ons 3/6', 'Fre 5/6', 'Fre 5/6', 'Fre 5/6'],
-  tableData: [
-    ['Emdrup Svøm', ' 16.00', 'Tilmeld'],
-    ['Valby Svøm', ' 12.00', 'Tilmeld'],
-    ['Valby Svøm ', '18.00', 'Tilmeld'],
-    ['Hillerød Svøm', '21.00', 'Tilmeld'],
-    ['Hillerød Svøm', '21.00', 'Tilmeld'],
-    ['Hillerød Svøm', '21.00', 'Tilmeld'],
-  ],
-};
 
 export function SwimmingScreen() {
+
   return (
     <View style={styles.containerTable}>
-      <Text style={{fontSize: 30, align: "center"}}> Ugens Svømmetræninger </Text>
-      <Text></Text>
+      <Text style={styles.header}>This Week : Swimming</Text>
+      <Text style={styles.header2}>Week 14</Text>
       <Table borderStyle={{ borderWidth: 1 }}>
         <Row
-          data={CONTENT.tableHead}
+          data={tableContentMvp.tableHead}
           flexArr={[1, 2, 1, 1]}
           style={styles.head}
-          textStyle={styles.text}
+          textStyle={{...styles.text, fontWeight: 'bold'}}
         />
         <TableWrapper style={styles.wrapper}>
           <Col
-            data={CONTENT.tableTitle}
+            data={tableContentMvp.tableTitle}
             style={styles.title}
             heightArr={[28, 28]}
-            textStyle={styles.text}
+            textStyle={{...styles.text, fontWeight: 'bold'}}
           />
           <Rows
-            data={CONTENT.tableData}
-            flexArr={[2, 1, 1]}
+            data={tableContentMvp.tableData}
+            flexArr={[2, 1, 1, 1]}
             style={styles.row}
             textStyle={styles.text}
           />
         </TableWrapper>
       </Table>
+      <Text style={styles.nextWeek}>Next Week</Text>
     </View>
   );
 }

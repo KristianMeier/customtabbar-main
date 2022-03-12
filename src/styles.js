@@ -7,6 +7,14 @@ export function getWidth() {
 }
 
 const styles = StyleSheet.create({
+  header: {
+    fontSize: 25,
+    fontWeight: "bold"
+  },
+  header2: {
+    paddingBottom:6,
+    fontSize: 18,
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -51,6 +59,11 @@ const styles = StyleSheet.create({
     left: 50,
     borderRadius: 20,
   },
+  nextWeek: { 
+    paddingTop:6, 
+    fontSize: 14, color: "blue", 
+    fontWeight: "bold"
+  },
   tabBarIcon: {
     width: 55,
     height: 55,
@@ -60,25 +73,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: Platform.OS == "android" ? 50 : 30
   },
-  container: { 
-    flex: 1, 
-    padding: 16, 
-    paddingTop: 30, 
-    backgroundColor: '#fff' 
-  },
-  head: { 
-    height: 40, 
-    backgroundColor: '#f1f8ff' 
-  },
-  text: { 
-    margin: 6 
-  },
-  containerTable: { flex: 1, padding: 16, paddingTop: 100, backgroundColor: '#fff' },
-  head: { height: 40, backgroundColor: 'gainsboro' },
-  wrapper: { flexDirection: 'row' },
-  title: { flex: 1, textAlign: 'center' },
-  row: { height: 28 },
-  text: { textAlign: 'center' }
+    containerTable: {  flex: 1, padding: 16, paddingTop: 100, backgroundColor: '#fff' },
+    head: {height: 40, backgroundColor: 'gainsboro' },
+    wrapper: { flexDirection: 'row' },
+    title: {flex: 1, textAlign: 'center' },
+    row: {height: 28 },
+    text: { fontSize: 11 ,textAlign: 'center' }
 });
 
 export default styles;

@@ -2,39 +2,29 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
 import styles from '../styles.js';
-
-const CONTENT = {
-  tableHead: ['', 'Aktivititet', 'Tid', 'Frameld'],
-  tableTitle: ['Tir 1/6', 'Ons 2/6', 'Ons 3/6', 'Fre 5/6'],
-  tableData: [
-    ['Emdrup Svøm', ' 16.00', 'Frameld'],
-    ['Valby Svøm', ' 12.00', 'Frameld'],
-    ['Valby Svøm ', '18.00', 'Frameld'],
-    ['Hillerød Svøm', '21.00', 'Frameld'],
-  ],
-};
+import { bookingContent } from '../tableContentMvp.js';
 
 export function HomeScreen() {
   return (
     <View style={styles.containerTable}>
-      <Text style={{fontSize: 30, align: "center"}}> Mine Bookings</Text>
-      <Text></Text>
+      <Text style={styles.header}>My Bookings</Text>
+      <Text style={styles.header2}>Week 14</Text>
       <Table borderStyle={{ borderWidth: 1 }}>
         <Row
-          data={CONTENT.tableHead}
+          data={bookingContent.tableHead}
           flexArr={[1, 2, 1, 1]}
           style={styles.head}
-          textStyle={styles.text}
+          textStyle={{...styles.text, fontWeight: 'bold'}}
         />
         <TableWrapper style={styles.wrapper}>
           <Col
-            data={CONTENT.tableTitle}
+            data={bookingContent.tableTitle}
             style={styles.title}
             heightArr={[28, 28]}
-            textStyle={styles.text}
+            textStyle={{...styles.text, fontWeight: 'bold'}}
           />
           <Rows
-            data={CONTENT.tableData}
+            data={bookingContent.tableData}
             flexArr={[2, 1, 1]}
             style={styles.row}
             textStyle={styles.text}
