@@ -5,11 +5,17 @@ import styles from '../styles.js';
 
 const CONTENT = {
   tableHead: ['', 'Aktivititet', 'Tid', 'Tilmeldt?'],
-  tableTitle: ['Tir 1/6', 'Ons 2/6', 'Ons 3/6', 'Fre 5/6'],
+  tableTitle: ['Tir 1/6', 'Ons 2/6', 'Ons 3/6', 'Fre 5/6', 'Fre 5/6', 'Fre 5/6', 'Fre 5/6', 'Fre 5/6', 'Fre 5/6', 'Fre 5/6'],
   tableData: [
     ['Emdrup Svøm', ' 16.00', 'Frameld'],
     ['Valby Svøm', ' 12.00', 'Frameld'],
     ['Valby Svøm ', '18.00', 'Frameld'],
+    ['Hillerød Svøm', '21.00', 'Frameld'],
+    ['Hillerød Svøm', '21.00', 'Frameld'],
+    ['Hillerød Svøm', '21.00', 'Frameld'],
+    ['Hillerød Svøm', '21.00', 'Frameld'],
+    ['Hillerød Svøm', '21.00', 'Frameld'],
+    ['Hillerød Svøm', '21.00', 'Frameld'],
     ['Hillerød Svøm', '21.00', 'Frameld'],
   ],
 };
