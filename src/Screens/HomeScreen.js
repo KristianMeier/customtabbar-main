@@ -7,8 +7,8 @@ import {
   Rows,
   Col,
 } from "react-native-table-component";
-import styles from "../styles.js";
-import { bookingContent } from "../tableContent.js";
+import styles from "../../assets/styles.js";
+import { bookingContent } from "../Components/TableComponent.js";
 
 // Her kan vi bruge det fra Typescript standard projectet. Info iet. Oppe i højre hjørne.
 

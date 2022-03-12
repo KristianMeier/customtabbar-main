@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "triappv02",
-    "slug": "triappv02",
+    "name": "triappv03",
+    "slug": "triappv03",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": ""
+    "description": "tilføjet funktion (alert)  ved midter knap"
   }
 }

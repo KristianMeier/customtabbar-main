@@ -7,8 +7,8 @@ import {
   Rows,
   Col,
 } from "react-native-table-component";
-import styles from "../styles.js";
-import { tableContent } from "../tableContent.js";
+import styles from "../../assets/styles.js";
+import { tableContent } from "../Components/TableComponent.js";
 
 tableContent.tableData.pop();
 tableContent.tableTitle.pop();

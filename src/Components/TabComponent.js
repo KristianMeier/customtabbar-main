@@ -1,7 +1,7 @@
 import React from "react";
 import { Alert, TouchableOpacity, Image, View } from "react-native";
-import styles from "./src/styles";
-import plus from "./assets/plus.png";
+import styles from "../../assets/styles";
+import plus from "../../assets/plus.png";
 
 export function ButtonView() {
   const showAlert = () => {

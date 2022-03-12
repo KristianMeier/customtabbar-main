@@ -11,8 +11,8 @@ import { HomeScreen } from "./src/Screens/HomeScreen";
 import { RunningScreen } from "./src/Screens/RunningScreen";
 import { BikingScreen } from "./src/Screens/BikingScreen";
 import { SwimmingScreen } from "./src/Screens/SwimmingScreen";
-import styles, { getWidth } from "./src/styles";
-import { ButtonView } from "./tabComponents.js";
+import styles, { getWidth } from "./assets/styles";
+import { ButtonView } from "./src/Components/TabComponent.js";
 
 const Tab = createBottomTabNavigator();
 
@@ -79,8 +79,7 @@ export default function App() {
           name={"ActionButton"}
           component={""}
           options={{
-            tabBarIcon: ({ focused }) => 
-            <ButtonView />
+            tabBarIcon: ({ focused }) => <ButtonView />,
           }}
         ></Tab.Screen>
 
