@@ -1,6 +1,5 @@
 import { StyleSheet, Dimensions, Platform} from "react-native";
 
-
 export function getWidth() {
   let width = Dimensions.get("window").width
   width = width - 80
@@ -38,6 +37,11 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 20
   },
+  iconPlus: {
+    width: 22,
+    height: 22,
+    tintColor: 'white'
+  },
   buttomMarker: {
     width: getWidth() - 20,
     height: 2,
@@ -72,9 +76,9 @@ const styles = StyleSheet.create({
   containerTable: { flex: 1, padding: 16, paddingTop: 100, backgroundColor: '#fff' },
   head: { height: 40, backgroundColor: 'gainsboro' },
   wrapper: { flexDirection: 'row' },
-  title: { flex: 1 },
+  title: { flex: 1, textAlign: 'center' },
   row: { height: 28 },
-  text: { textAlign: 'center' },
+  text: { textAlign: 'center' }
 });
 
 export default styles;

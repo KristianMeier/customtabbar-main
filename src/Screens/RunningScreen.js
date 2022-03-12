@@ -4,18 +4,17 @@ import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-componen
 import styles from '../styles.js';
 
 const CONTENT = {
-  tableHead: ['', 'Aktivititet', 'Tid', 'Tilmeldt?'],
+  tableHead: ['', 'Aktivititet', 'Tid', 'Tilmeld'],
   tableTitle: ['Tir 1/6', 'Ons 2/6', 'Ons 3/6', 'Fre 5/6', 'Fre 5/6', 'Fre 5/6', 'Fre 5/6', 'Fre 5/6'],
   tableData: [
-    ['Emdrup Svøm', ' 16.00', 'Frameld'],
-    ['Valby Svøm', ' 12.00', 'Frameld'],
-    ['Valby Svøm ', '18.00', 'Frameld'],
-    ['Hillerød Svøm', '21.00', 'Frameld'],
-    ['Hillerød Svøm', '21.00', 'Frameld'],
-    ['Hillerød Svøm', '21.00', 'Frameld'],
-    ['Hillerød Svøm', '21.00', 'Frameld'],
-    ['Hillerød Svøm', '21.00', 'Frameld'],
-
+    ['Emdrup Svøm', ' 16.00', 'Tilmeld'],
+    ['Valby Svøm', ' 12.00', 'Tilmeld'],
+    ['Valby Svøm ', '18.00', 'Tilmeld'],
+    ['Hillerød Svøm', '21.00', 'Tilmeld'],
+    ['Hillerød Svøm', '21.00', 'Tilmeld'],
+    ['Hillerød Svøm', '21.00', 'Tilmeld'],
+    ['Hillerød Svøm', '21.00', 'Tilmeld'],
+    ['Hillerød Svøm', '21.00', 'Tilmeld'],
   ],
 };
 

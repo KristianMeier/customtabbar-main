@@ -28,50 +28,32 @@ export default function App() {
           tabBarIcon: ({ focused }) => (
             <View style={styles.icon}>
               <FontAwesome5
-                  name="home"
-                  size={20}
-                  color={focused ? 'red' : 'gray'}
-              ></FontAwesome5>
+                  name="home" size={20} color={focused ? 'red' : 'gray'} />
             </View>
           )
         }} listeners={({ navigation, route }) => ({
           tabPress: e => {
-            Animated.spring(tabOffsetValue, {
-              toValue: 0,
-              useNativeDriver: true
-            }).start();
+            Animated.spring(tabOffsetValue, { toValue: 0, useNativeDriver: true }).start();
           }
         })}></Tab.Screen>
 
         <Tab.Screen name={"Running"} component={RunningScreen} options={{
           tabBarIcon: ({ focused }) => (
             <View style={styles.icon}>
-              <FontAwesome5
-                name="running"
-                size={20}
-                color={focused ? 'red' : 'gray'}
-              ></FontAwesome5>
+              <FontAwesome5 name="running" size={20} color={focused ? 'red' : 'gray'} />
             </View>
           )
         }} listeners={({ navigation, route }) => ({
           tabPress: e => {
-            Animated.spring(tabOffsetValue, {
-              toValue: getWidth(),
-              useNativeDriver: true
-            }).start();
+            Animated.spring(tabOffsetValue, { toValue: getWidth(), useNativeDriver: true }).start();
           }
         })}></Tab.Screen>
 
         <Tab.Screen name={"ActionButton"} component={""} options={{
           tabBarIcon: ({ focused }) => (
             <TouchableOpacity>
-              <View style={styles.tabBarIcon}
-              >
-                  <Image source={plus} style={{
-                    width: 22,
-                    height: 22,
-                    tintColor: 'white'
-                  }}></Image>
+              <View style={styles.tabBarIcon}>
+                  <Image source={plus} style={styles.iconPlus} />
               </View>
             </TouchableOpacity>
           )
@@ -80,38 +62,24 @@ export default function App() {
         <Tab.Screen name={"Bikings"} component={BikingScreen} options={{
           tabBarIcon: ({ focused }) => (
             <View style={styles.icon}>
-              <FontAwesome5
-                name="biking"
-                size={20}
-                color={focused ? 'red' : 'gray'}
-              ></FontAwesome5>
+              <FontAwesome5 name="biking" size={20} color={focused ? 'red' : 'gray'} />
             </View>
           )
         }} listeners={({ navigation, route }) => ({
           tabPress: e => {
-            Animated.spring(tabOffsetValue, {
-              toValue: getWidth() * 3,
-              useNativeDriver: true
-            }).start();
+            Animated.spring(tabOffsetValue, { toValue: getWidth() * 3, useNativeDriver: true }).start();
           }
         })}></Tab.Screen>
 
         <Tab.Screen name={"Swimming"} component={SwimmingScreen} options={{
           tabBarIcon: ({ focused }) => (
             <View style={styles.icon  }>
-              <FontAwesome5
-                name="swimmer"
-                size={20}
-                color={focused ? 'red' : 'gray'}
-              ></FontAwesome5>
+              <FontAwesome5 name="swimmer" size={20} color={focused ? 'red' : 'gray'} />
             </View>
           )
         }} listeners={({ navigation, route }) => ({
           tabPress: e => {
-            Animated.spring(tabOffsetValue, {
-              toValue: getWidth() * 4,
-              useNativeDriver: true
-            }).start();
+            Animated.spring(tabOffsetValue, { toValue: getWidth() * 4, useNativeDriver: true }).start();
           }
         })}></Tab.Screen>
       </Tab.Navigator>
