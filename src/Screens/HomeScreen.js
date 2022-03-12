@@ -4,6 +4,8 @@ import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-componen
 import styles from '../styles.js';
 import { bookingContent } from '../tableContentMvp.js';
 
+// Her kan vi bruge det fra Typescript standard projectet. Info iet. Oppe i højre hjørne.
+
 export function HomeScreen() {
   return (
     <View style={styles.containerTable}>

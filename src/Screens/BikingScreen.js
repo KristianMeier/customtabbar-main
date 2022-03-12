@@ -4,11 +4,10 @@ import { Table, TableWrapper, Row, Rows, Col} from 'react-native-table-component
 import styles from '../styles.js';
 import { tableContentMvp } from '../tableContentMvp.js';
 
-tableContentMvp.tableData.pop();
-tableContentMvp.tableTitle.pop();
-
 export function BikingScreen() {
-  
+  tableContentMvp.tableData.pop();
+  tableContentMvp.tableTitle.pop();
+
   return (
     <View style={styles.containerTable}>
       <Text style={styles.header}>This Week : Biking</Text>

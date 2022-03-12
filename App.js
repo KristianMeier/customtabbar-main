@@ -18,6 +18,7 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   const tabOffsetValue = useRef(new Animated.Value(0)).current;
+  console.log(tabOffsetValue)
   return (
     <NavigationContainer >
       <Tab.Navigator tabBarOptions={{
